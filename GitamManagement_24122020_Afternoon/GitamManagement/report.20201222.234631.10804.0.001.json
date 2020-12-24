@@ -1,0 +1,342 @@
+
+{
+  "header": {
+    "reportVersion": 2,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20201222.234631.10804.0.001.json",
+    "dumpEventTime": "2020-12-22T23:46:31Z",
+    "dumpEventTimeStamp": "1608660991890",
+    "processId": 10804,
+    "threadId": null,
+    "cwd": "D:\\Gitam Admission Project\\GitamManagement_new\\GitamManagement",
+    "commandLine": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Microsoft\\VisualStudio\\NodeJs\\node.exe",
+      "--expose-gc",
+      "--max_old_space_size=3072",
+      "C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\4.0\\tsserver.js",
+      "--cancellationPipeName",
+      "\\\\.\\pipe\\tsserver-cancellation-ProjectHost-7420",
+      "--useSingleInferredProject",
+      "--locale",
+      "en-US",
+      "--suppressDiagnosticEvents",
+      "--enableTelemetry",
+      "--allowLocalPluginLoads",
+      "--npmLocation",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Microsoft\\VisualStudio\\NodeJs\\npm.cmd",
+      "--globalPlugins",
+      "@vsintellicode/typescript-intellicode-plugin",
+      "--pluginProbeLocations",
+      "c:\\program files (x86)\\microsoft visual studio\\2019\\community\\common7\\ide\\commonextensions\\microsoft\\typescript",
+      "--typingSafeListLocation",
+      "c:\\program files (x86)\\microsoft visual studio\\2019\\community\\common7\\ide\\commonextensions\\microsoft\\typescript\\typingSafeList.json",
+      "--eventPort",
+      "49966"
+    ],
+    "nodejsVersion": "v12.16.3",
+    "wordSize": 32,
+    "arch": "ia32",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.16.3",
+      "v8": "7.8.279.23-node.35",
+      "uv": "1.34.2",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.16.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1g",
+      "cldr": "36.0",
+      "icu": "65.1",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.16.3/node-v12.16.3-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.16.3/node-v12.16.3.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.16.3/win-x86/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.19041",
+    "osVersion": "Windows 10 Enterprise",
+    "osMachine": "i686",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i5-3360M CPU @ 2.80GHz",
+        "speed": 2791,
+        "user": 6014890,
+        "nice": 0,
+        "sys": 4414203,
+        "idle": 19463312,
+        "irq": 164515
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-3360M CPU @ 2.80GHz",
+        "speed": 2791,
+        "user": 6138890,
+        "nice": 0,
+        "sys": 4277906,
+        "idle": 19475406,
+        "irq": 44437
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-3360M CPU @ 2.80GHz",
+        "speed": 2791,
+        "user": 6641921,
+        "nice": 0,
+        "sys": 4805218,
+        "idle": 18445046,
+        "irq": 42593
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-3360M CPU @ 2.80GHz",
+        "speed": 2791,
+        "user": 7009609,
+        "nice": 0,
+        "sys": 5040890,
+        "idle": 17841687,
+        "irq": 38171
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "3c:a9:f4:0e:18:cc",
+        "address": "fe80::6d60:64c8:7f7:efdf",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 4
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "3c:a9:f4:0e:18:cc",
+        "address": "192.168.237.50",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "DESKTOP-8DHS547"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+  ],
+  "javascriptHeap": {
+    "totalMemory": 113410048,
+    "totalCommittedMemory": 113410048,
+    "usedMemory": 106452776,
+    "availableMemory": 3140419908,
+    "memoryLimit": 3246391296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 22612,
+        "used": 22612,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 1048576,
+        "committedMemory": 1048576,
+        "capacity": 1048016,
+        "used": 1047952,
+        "available": 64
+      },
+      "old_space": {
+        "memorySize": 81883136,
+        "committedMemory": 81883136,
+        "capacity": 81805908,
+        "used": 76820516,
+        "available": 4985392
+      },
+      "code_space": {
+        "memorySize": 3571712,
+        "committedMemory": 3571712,
+        "capacity": 3397184,
+        "used": 2174752,
+        "available": 1222432
+      },
+      "map_space": {
+        "memorySize": 528384,
+        "committedMemory": 528384,
+        "capacity": 527956,
+        "used": 345200,
+        "available": 182756
+      },
+      "large_object_space": {
+        "memorySize": 26066944,
+        "committedMemory": 26066944,
+        "capacity": 26040016,
+        "used": 26040016,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 1728,
+        "used": 1728,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1048016,
+        "used": 0,
+        "available": 1048016
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 534.921,
+    "kernelCpuSeconds": 53.953,
+    "cpuConsumptionPercent": 1.65228,
+    "maxRss": 525524992,
+    "pageFaults": {
+      "IORequired": 1061017,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 94746,
+      "writes": 46884
+    }
+  },
+  "libuv": [
+  ],
+  "workers": [
+  ],
+  "environmentVariables": {
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\Anil Kumar-DSPS\\AppData\\Roaming",
+    "CommonProgramFiles": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "DESKTOP-8DHS547",
+    "ComSpec": "C:\\WINDOWS\\system32\\cmd.exe",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+    "FPS_BROWSER_USER_PROFILE_STRING": "Default",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\Anil Kumar-DSPS",
+    "IIS_BIN": "C:\\Program Files (x86)\\IIS Express",
+    "IIS_DRIVE": "C:",
+    "IIS_SITES_HOME": "C:\\Users\\Anil Kumar-DSPS\\Documents\\My Web Sites",
+    "IIS_USER_HOME": "C:\\Users\\Anil Kumar-DSPS\\Documents\\IISExpress",
+    "LOCALAPPDATA": "C:\\Users\\Anil Kumar-DSPS\\AppData\\Local",
+    "LOGONSERVER": "\\\\DESKTOP-8DHS547",
+    "MSBuildLoadMicrosoftTargetsReadOnly": "true",
+    "MSMPI_BENCHMARKS": "C:\\Program Files\\Microsoft MPI\\Benchmarks\\",
+    "MSMPI_BIN": "C:\\Program Files\\Microsoft MPI\\Bin\\",
+    "NUMBER_OF_PROCESSORS": "4",
+    "OneDrive": "C:\\Users\\Anil Kumar-DSPS\\OneDrive",
+    "OneDriveConsumer": "C:\\Users\\Anil Kumar-DSPS\\OneDrive",
+    "OS": "Windows_NT",
+    "Path": "C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\dotnet\\;C:\\Users\\Anil Kumar-DSPS\\AppData\\Local\\Programs\\Python\\Python38-32\\Scripts\\;C:\\Users\\Anil Kumar-DSPS\\AppData\\Local\\Programs\\Python\\Python38-32\\;C:\\Users\\Anil Kumar-DSPS\\anaconda3;C:\\Users\\Anil Kumar-DSPS\\anaconda3\\Library\\mingw-w64\\bin;C:\\Users\\Anil Kumar-DSPS\\anaconda3\\Library\\usr\\bin;C:\\Users\\Anil Kumar-DSPS\\anaconda3\\Library\\bin;C:\\Users\\Anil Kumar-DSPS\\anaconda3\\Scripts;C:\\Users\\Anil Kumar-DSPS\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Anil Kumar-DSPS\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Anil Kumar-DSPS\\AppData\\Roaming\\npm;;C:\\Program Files\\Azure Data Studio\\bin;C:\\Users\\Anil Kumar-DSPS\\.dotnet\\tools",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+    "PkgDefApplicationConfigFile": "C:\\Users\\Anil Kumar-DSPS\\AppData\\Local\\Microsoft\\VisualStudio\\16.0_c1b5fecd\\devenv.exe.config",
+    "PROCESSOR_ARCHITECTURE": "x86",
+    "PROCESSOR_ARCHITEW6432": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 58 Stepping 9, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "3a09",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles": "C:\\Program Files (x86)",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\PowerShell\\Modules\\",
+    "PUBLIC": "C:\\Users\\Public",
+    "ServiceHubLogSessionKey": "53783D1C",
+    "SESSIONNAME": "Console",
+    "SystemDrive": "C:",
+    "SystemRoot": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\ANILKU~1\\AppData\\Local\\Temp",
+    "ThreadedWaitDialogDpiContext": "-4",
+    "TMP": "C:\\Users\\ANILKU~1\\AppData\\Local\\Temp",
+    "USERDOMAIN": "DESKTOP-8DHS547",
+    "USERDOMAIN_ROAMINGPROFILE": "DESKTOP-8DHS547",
+    "USERNAME": "Anil Kumar-DSPS",
+    "USERPROFILE": "C:\\Users\\Anil Kumar-DSPS",
+    "VisualStudioDir": "C:\\Users\\Anil Kumar-DSPS\\Documents\\Visual Studio 2019",
+    "VisualStudioEdition": "Microsoft Visual Studio Community 2019",
+    "VisualStudioVersion": "16.0",
+    "VSAPPIDDIR": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\",
+    "VSAPPIDNAME": "devenv.exe",
+    "VSLANG": "1033",
+    "VSSKUEDITION": "Community",
+    "windir": "C:\\WINDOWS"
+  },
+  "sharedObjects": [
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Microsoft\\VisualStudio\\NodeJs\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\System32\\bcrypt.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\powrprof.dll",
+    "C:\\WINDOWS\\SYSTEM32\\UMPDC.dll",
+    "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "C:\\WINDOWS\\System32\\combase.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll",
+    "C:\\WINDOWS\\System32\\bcryptprimitives.dll",
+    "\\\\?\\C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\4.0\\node_modules\\@microsoft\\typescript-etw\\bin\\ia32\\typescript-etw.node",
+    "C:\\WINDOWS\\System32\\NSI.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+    "C:\\WINDOWS\\system32\\napinsp.dll",
+    "C:\\WINDOWS\\system32\\pnrpnsp.dll",
+    "C:\\WINDOWS\\system32\\wshbth.dll",
+    "C:\\WINDOWS\\system32\\NLAapi.dll",
+    "C:\\WINDOWS\\System32\\winrnr.dll",
+    "C:\\Windows\\System32\\rasadhlp.dll",
+    "C:\\WINDOWS\\System32\\fwpuclnt.dll"
+  ]
+}

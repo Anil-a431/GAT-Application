@@ -1,0 +1,78 @@
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\csc.exe
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\csc.exe.config
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\csc.rsp
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\csi.exe
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\csi.rsp
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\System.AppContext.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\System.Collections.Immutable.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\System.IO.FileSystem.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\System.Reflection.Metadata.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\vbc.exe
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\vbc.exe.config
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\vbc.rsp
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\VBCSCompiler.exe
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\roslyn\VBCSCompiler.exe.config
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\GitamManagement.dll.config
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\GitamManagement.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\GitamManagement.pdb
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\BouncyCastle.Crypto.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\itextsharp.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\itextsharp.xml
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\obj\Release\GitamManagement.csprojAssemblyReference.cache
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\obj\Release\GitamManagement.csproj.CoreCompileInputs.cache
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\obj\Release\GitamManagement.csproj.CopyComplete
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\obj\Release\GitamManagement.dll
+D:\Gitam Admission Project\GitamManagement_new\GitamManagement\GitamManagement\obj\Release\GitamManagement.pdb
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\csc.exe
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\csc.exe.config
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\csc.rsp
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\csi.exe
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\csi.rsp
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\System.AppContext.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\System.Collections.Immutable.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\System.IO.FileSystem.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\System.Reflection.Metadata.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\vbc.exe
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\vbc.exe.config
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\vbc.rsp
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\VBCSCompiler.exe
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\roslyn\VBCSCompiler.exe.config
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\GitamManagement.dll.config
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\GitamManagement.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\GitamManagement.pdb
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\BouncyCastle.Crypto.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\itextsharp.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\itextsharp.xml
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\obj\Release\GitamManagement.csprojAssemblyReference.cache
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\obj\Release\GitamManagement.csproj.CoreCompileInputs.cache
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\obj\Release\GitamManagement.csproj.CopyComplete
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\obj\Release\GitamManagement.dll
+C:\Projects\GitamManagement2312Afternoon\GitamManagement\GitamManagement\obj\Release\GitamManagement.pdb
