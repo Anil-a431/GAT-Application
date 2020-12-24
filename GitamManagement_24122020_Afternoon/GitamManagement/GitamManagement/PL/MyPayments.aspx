@@ -14,8 +14,9 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="card">
+                        <img src="../Assets/Images/Success.jpg" style="height:auto;width:200px;" />
                     <h1>Success</h1>
-                    <p class="text-center payment"><strong>Dear Applicant We Have Recieved Your Payment For the Applied Courses<br />
+                    <p class="text-center payment" style="color:green;"><strong>Dear Applicant We Have Recieved Your Payment For the Applied Courses<br />
                        Thank You !!!</strong></p>
                 </div>
                 </div>
@@ -37,11 +38,12 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="card">
+                        <img src="../Assets/Images/Failure.png" style="height:auto;width:150px;" />
                     <h1>Failure</h1>
-                    <p class="text-center payment"><strong>Dear Applicant Your Transaction has failed<br />
+                    <p class="text-center payment" style="color:red;"><strong>Dear Applicant Your Transaction has failed<br />
                        Please try again !!!<br />
                         Thank you !!!
-                                                   </strong></p>
+                     </strong></p>
                 </div>
                 </div>
                 

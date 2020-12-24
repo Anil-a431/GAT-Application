@@ -283,7 +283,87 @@ namespace GitamManagement
             }
         }
 
+        public List<DistNames> getDistNames(int stateID)
+        {
+            List<DistNames> objDNames= new List<DistNames>();
+            DistNames objD = new DistNames();
+            DataSet Dset = new DataSet();
+            try
+            {
+                using (SqlConnection Con = new SqlConnection(conString))
+                {
+                    SqlCommand Cmd = new SqlCommand("Usp_GetDistrictListByStateID", Con);
+                    Cmd.CommandType = CommandType.StoredProcedure;
+                    Cmd.Parameters.AddWithValue("@StateID",stateID);
+                    using (SqlDataAdapter SDA = new SqlDataAdapter(Cmd))
+                    {
+                        SDA.Fill(Dset);
+                    }
+                }
+                if (Dset != null && Dset.Tables.Count > 0)
+                {
+                    if (Dset.Tables[0] != null && Dset.Tables[0].Rows.Count > 0)
+                    {
+                        foreach (DataRow dr in Dset.Tables[0].Rows)
+                        {
+                            objD = new DistNames()
+                            {
+                                DistID = Convert.ToString(dr["ID"]),
+                                DNames = Convert.ToString(dr["DistName"])
 
+                            };
+                            objDNames.Add(objD);
+                        }
+                    }
+                }
+                return objDNames;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        
+        public List<CityDetailsDistID> getCityDetailsByDist(int distID)
+        {
+            List<CityDetailsDistID> objCityData1 = new List<CityDetailsDistID>();
+            CityDetailsDistID dataAdd = new CityDetailsDistID();
+            DataSet Dset = new DataSet();
+            try
+            {
+                using (SqlConnection Con = new SqlConnection(conString))
+                {
+                    SqlCommand Cmd = new SqlCommand("USP_getCityDetailsByDist", Con);
+                    Cmd.CommandType = CommandType.StoredProcedure;
+                    Cmd.Parameters.AddWithValue("@distID", distID);
+                    using (SqlDataAdapter SDA = new SqlDataAdapter(Cmd))
+                    {
+                        SDA.Fill(Dset);
+                    }
+                }
+                if (Dset != null && Dset.Tables.Count > 0)
+                {
+                    if (Dset.Tables[0] != null && Dset.Tables[0].Rows.Count > 0)
+                    {
+                        foreach (DataRow dr in Dset.Tables[0].Rows)
+                        {
+                            dataAdd = new CityDetailsDistID()
+                            {
+                                cityID = Convert.ToString(dr["ID"]),
+                                cityNames = Convert.ToString(dr["CityName"])
+
+                            };
+                            objCityData1.Add(dataAdd);
+                        }
+                    }
+                }
+                return objCityData1;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
         public List<_CampusList> GetCampusList()
         {
             _CampusList CampusData = new _CampusList();
@@ -768,7 +848,8 @@ namespace GitamManagement
         }
 
 
-       public DataTable InsertUserCourseSelection(string UserId,string institue, string study, string yop, string university)
+       public DataTable InsertUserCourseSelection(string UserId,string institue, string study, string yop, 
+           string university,string StateID,string DistID,string CityID, int update)
         {
             DataTable dt = new DataTable();
 
@@ -783,6 +864,10 @@ namespace GitamManagement
                     Cmd.Parameters.AddWithValue("@BoardofStudy", Convert.ToString(study));
                     Cmd.Parameters.AddWithValue("@YOP", Convert.ToString(yop));
                     Cmd.Parameters.AddWithValue("@University", Convert.ToString(university));
+                    Cmd.Parameters.AddWithValue("@StateID", Convert.ToInt32(StateID));
+                    Cmd.Parameters.AddWithValue("@DistID ", Convert.ToInt32(DistID));
+                    Cmd.Parameters.AddWithValue("@CityID ", Convert.ToInt32(CityID));
+                    Cmd.Parameters.AddWithValue("@update", update);
                     Con.Open();
                     //res = Cmd.ExecuteNonQuery();
 
@@ -792,7 +877,6 @@ namespace GitamManagement
                     }
                     //res = Convert.ToInt32(Response);
                 }
-
                 return dt;
             }
             catch (Exception ex)
@@ -840,6 +924,38 @@ namespace GitamManagement
                 return null;
             }
             return dt;
+        }
+
+        public PrevEduDetails getPrevDetails(string UserId)
+        {
+            PrevEduDetails objPrvDetails = new PrevEduDetails();
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection Con = new SqlConnection(conString))
+                {
+                    SqlCommand Cmd = new SqlCommand("USP_getPrevDetails", Con);
+                    Cmd.CommandType = CommandType.StoredProcedure;
+                    Cmd.Parameters.AddWithValue("@UserID", UserId);
+                    Con.Open();
+                    using (SqlDataAdapter SDA = new SqlDataAdapter(Cmd))
+                    {
+                        SDA.Fill(dt);
+                    }
+
+                }
+                objPrvDetails.CollegeName = dt.Rows[0]["CollegeName"].ToString();
+                objPrvDetails.BoardID = Convert.ToInt32(dt.Rows[0]["BoardName"].ToString());
+                objPrvDetails.yop = dt.Rows[0]["YOP"].ToString();
+                objPrvDetails.StateID = Convert.ToInt32(dt.Rows[0]["StateID"].ToString());
+                objPrvDetails.DistID = Convert.ToInt32(dt.Rows[0]["DistID"].ToString());
+                objPrvDetails.CityID = Convert.ToInt32(dt.Rows[0]["CityID"].ToString());
+                return objPrvDetails;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
 
         public bool InsertUserPersonalDetails(string UserId,string gender, string dob, string adharnum,

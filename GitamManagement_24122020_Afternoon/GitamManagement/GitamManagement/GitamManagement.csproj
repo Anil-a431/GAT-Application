@@ -84,6 +84,7 @@
     <Content Include="Assets\Css\select2-bootstrap4.min.css" />
     <Content Include="Assets\Css\select2.min.css" />
     <Content Include="Assets\Css\style.default.css" />
+    <Content Include="Assets\Css\sweetalert2.min.css" />
     <Content Include="Assets\fonts\fontawesome-webfont.svg" />
     <Content Include="Assets\Images\avatar-1.jpg" />
     <Content Include="Assets\Images\bb.jpg" />
@@ -97,6 +98,7 @@
     <Content Include="Assets\Images\brand\brand-5.svg" />
     <Content Include="Assets\Images\brand\brand-6.svg" />
     <Content Include="Assets\Images\dummy.jpg" />
+    <Content Include="Assets\Images\Failure.png" />
     <Content Include="Assets\Images\flags\16\AD.png" />
     <Content Include="Assets\Images\flags\16\AE.png" />
     <Content Include="Assets\Images\flags\16\AF.png" />
@@ -396,6 +398,7 @@
     <Content Include="Assets\Images\project-2.jpg" />
     <Content Include="Assets\Images\project-3.jpg" />
     <Content Include="Assets\Images\project-4.jpg" />
+    <Content Include="Assets\Images\Success.jpg" />
     <Content Include="Assets\Images\template-mac.png" />
     <Content Include="Assets\Js\bootstrap.min.js" />
     <Content Include="Assets\Js\charts-custom.js" />

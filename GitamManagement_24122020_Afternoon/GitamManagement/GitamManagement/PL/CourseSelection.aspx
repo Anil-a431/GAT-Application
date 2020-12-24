@@ -28,9 +28,28 @@
                           <label class="form-control-label">Board of Study</label>
                            <select id="study"  class="form-control" required ="required"></select>
                         </div>
+                       
                         <div class="form-group">
+                          <label class="form-control-label">State</label>
+                          <select name="state" id="stateID" class="form-control mb-3">
+                              <option selected="selected">Select State</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                          <label class="form-control-label">District</label>
+                          <select name="district" id="districtID" class="form-control mb-3">
+                              <option selected="selected">Select District</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                          <label class="form-control-label">City</label>
+                          <select name="district" id="cityID" class="form-control mb-3">
+                              <option selected="selected">Select City</option>
+                           </select>
+                        </div>
+                         <div class="form-group">
                           <label class="form-control-label">Year of Passing</label>
-                          <input type="number" id="yop" required ="required"  placeholder="Enter Year Of Passing" class="form-control">
+                          <input type="text" pattern="^[1-2][0-9]{3}$"  id="yop" required ="required"  placeholder="Enter Year Of Passing" class="form-control">
                         </div>
                         <div class="form-group univ">
                           <label class="form-control-label" >University / Institution</label>
@@ -39,6 +58,7 @@
                         
                         <div class="form-group">       
                           <input type="submit" id="btnSubmit" value="Submit" class="btn btn-primary">
+                            <input type="submit" id="btnUpdate" value="Update" class="btn btn-primary" />
                         </div>
                       
                     </div>
@@ -46,6 +66,8 @@
         </div>
     <script>
         $(document).ready(function () {
+            $("#btnSubmit").hide();
+            $("#btnUpdate").hide();
             debugger;
             $.ajax({
                 type: "POST",
@@ -53,7 +75,6 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 data: JSON.stringify({
-                    
                 }),
                 success: function (data) {
                     if (data.d) {
@@ -66,7 +87,94 @@
                    
                 }
             });
+            $.ajax({
+                type: "POST",
+                url: "../GitamManagementService.asmx/getPrevDetails",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify({
+                }),
+                success: function (data) {
+                    if (data.d) {
+                        $("#institue").val(data.d.CollegeName);
+                        $("#study").val(data.d.BoardID);
+                        $("#yop").val(data.d.yop);
+                        setTimeout(function () { $("#stateID").val(data.d.StateID); }, 1000);
+                        getDistList(data.d.StateID);
+                        setTimeout(function () { $("#districtID").val(data.d.DistID); }, 1000);
+                        getCityListByDist(data.d.DistID);
+                        setTimeout(function () { $("#cityID").val(data.d.CityID); }, 1000);
+                        $("#btnSubmit").hide();
+                        $("#btnUpdate").show();
+                    } else {
+                        $("#btnSubmit").show();
+                        $("#btnUpdate").hide();
+                    }
+                }
+            });
+            $.ajax({
+                type: "POST",
+                url: "../GitamManagementService.asmx/GetStateLists1",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data.d);
+                    for (var i = 0; i < data.d.length; i++) {
+                        var row_State = data.d[i];
+                        $("#stateID").append(new Option(row_State.StateName, row_State.ID));
+                    }
+                }
+            });
+
         })
+        $('#stateID').change(function () {
+            if ($(this).val() != "") {
+                debugger;
+                getDistList($('#stateID').val());
+            }
+        });
+        function getDistList(stateID) {
+            debugger;
+            $.ajax({
+                type: "POST",
+                url: "../GitamManagementService.asmx/getDistNames",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify({ 'stateID': stateID }),
+                success: function (data) {
+                    $('#districtID').empty();
+                    $("#districtID").append(new Option("Select District *", ""));
+                    for (var i = 0; i < data.d.length; i++) {
+                        var row_District = data.d[i];
+                        $("#districtID").append(new Option(row_District.DNames, row_District.DistID));
+                    }
+                }
+            });
+        }
+        $('#districtID').change(function () {
+            if ($(this).val() != "") {
+                debugger;
+                getCityListByDist($('#districtID').val());
+            }
+        });
+        function getCityListByDist(distID) {
+            debugger;
+            $.ajax({
+                type: "POST",
+                url: "../GitamManagementService.asmx/getCityDetailsByDist",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify({ 'distID': distID }),
+                success: function (data) {
+                    $('#cityID').empty();
+                    $("#cityID").append(new Option("Select District *", ""));
+                    for (var i = 0; i < data.d.length; i++) {
+                        var row_City = data.d[i];
+                        $("#cityID").append(new Option(row_City.cityNames, row_City.cityID));
+                    }
+                }
+            });
+        }
         
         $("#btnSubmit").click(function () {
             debugger;
@@ -89,9 +197,52 @@
                     'study': board,
                     'yop': $('#yop').val(),
                     'university': univ,
+                    'StateID': $("#stateID").val(),
+                    'DistID': $("#districtID").val(),
+                    'CityID': $("#cityID").val(),
+                    'update':0
                 }),
                 success: function (data) {
                     if (data.d) {
+                        setTimeout(function () { alert("Your Previous Education Details are Inserted Successfully"); },2000);
+                        window.location.href = "/CourseDisplayPage";
+                    }
+                    else {
+                        alert(data.d);
+                    }
+                }
+            });
+        })
+
+        $("#btnUpdate").click(function () {
+            debugger;
+            var board, univ;
+            if ($('#study').val() != "") {
+                board = $('#study').val();
+                univ = "";
+            }
+            else {
+                univ = $("#university").val();
+                board = "";
+            }
+            $.ajax({
+                type: "POST",
+                url: "../GitamManagementService.asmx/InsertUserCourseSelection",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify({
+                    'institue': $('#institue').val(),
+                    'study': board,
+                    'yop': $('#yop').val(),
+                    'university': univ,
+                    'StateID': $("#stateID").val(),
+                    'DistID': $("#districtID").val(),
+                    'CityID': $("#cityID").val(),
+                    'update': 1
+                }),
+                success: function (data) {
+                    if (data.d) {
+                        setTimeout(function () { alert("Your Previous Education Details are updated"); }, 2000);
                         window.location.href = "/CourseDisplayPage";
                     }
                     else {

@@ -12,11 +12,34 @@ namespace GitamManagement.Models
         public List<_CampusList> CampusList { get; set; }
     }
 
+    public class PrevEduDetails
+    {
+        public string CollegeName;
+        public int BoardID;
+        public string yop;
+        public int StateID;
+        public int DistID;
+        public int CityID;
+    }
+
+
     public class CurrentEduDetailsDisplay
     {
         public string ProgramName;
         public string SubProgramName;
         public string CampusLocation;
+    }
+
+    public class DistNames
+    {
+        public string DistID;
+        public string DNames;
+    }
+
+    public class CityDetailsDistID
+    {
+        public string cityID;
+        public string cityNames;
     }
 
     public class ContactDetails

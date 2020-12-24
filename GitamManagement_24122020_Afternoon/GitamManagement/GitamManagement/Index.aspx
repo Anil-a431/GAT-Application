@@ -20,11 +20,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="../Assets/Css/style.default.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css" id="theme-styles">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="../Assets/Css/Custom.css">
+        
 
         <link rel="stylesheet" href="../intl-tel-input-master/build/css/intlTelInput.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css" id="theme-styles">
+  
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/favicon.ico">
         <link rel="shortcut icon" href="https://www.gitam.edu/assets/images/favicon.ico" type="image/x-icon">
@@ -204,14 +206,16 @@
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="home-tab">
                                     <div class="content">
-                                        <form method="post" runat="server" class="form-validate mb-2">
-                                            <div class="form-group">
-                                                <asp:TextBox ID="loginEmail" runat="server" placeholder="User Name" data-msg="Please enter your username" class="input-material"></asp:TextBox>
-                                               <%-- <label for="login-username" class="label-material">User Name</label>--%>
+                                        <form method="post" runat="server" class="form-validate mb-2 ">
+                                            <div class="form-group input-material">
+                                                <asp:TextBox ID="loginEmail" runat="server"  
+                                                    data-msg="Please enter your username" class="input-material"></asp:TextBox>
+                                                <label for="loginEmail" class="label-material">User Name</label>
                                             </div>
-                                            <div class="form-group">
-                                                <asp:TextBox ID="loginPassword" runat="server" placeholder="Password" TextMode="Password" data-msg="Please enter your password" class="input-material"></asp:TextBox>
-                                                <%--<label for="login-password" class="label-material">Password</label>--%>
+                                            <div class="form-group input-material">
+                                                <asp:TextBox ID="loginPassword" runat="server"  
+                                                    TextMode="Password" data-msg="Please enter your password" class="input-material"></asp:TextBox>
+                                                <label for="loginPassword" class="label-material">Password</label>
                                             </div>
                                             <asp:Button runat="server" ID="loginBtn" OnClick="validateUser" Text="Login" class="btn btn-primary" />
                                             <!-- This should be submit button but I replaced it with <a> for demo purposes-->
@@ -225,14 +229,14 @@
                                         <form method="post" class="form-validate mb-2" id="reg-form-Validate">
                                             <div class="form-group">
                                                 <input type="text" name="name" pattern="^[a-zA-Z]{2,35}$" id="Name" 
-                                                    autocomplete="off" class="input-material" placeholder="Full Name*" required data-msg="Please Enter Only Alphabets" />
-                                                <%--<label for="login-username" class="label-material">Full Name*</label>--%>
+                                                    autocomplete="off" class="input-material"  required data-msg="Please Enter Only Alphabets" />
+                                                <label for="Name" class="label-material">Full Name*</label>
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" name="Email" id="Email"
-                                                    placeholder="Email Address*"
+                                                    
                                                     required data-msg="Please enter your EmailID" class="input-material" />
-                                               <%-- <label for="login-password" class="label-material">Email Address*(Ex:abc@abc.com)</label>--%>
+                                                <label for="Email" class="label-material">Email Address*</label>
                                             </div>
                                                 <div class="mb-4">
                                                    
@@ -291,9 +295,15 @@
                                                     authorized services. 
                                                    You may opt-out at any time</small></p>
                                             </div>
-                                                <button type="button" id="registerBtn" class="btn btn-primary">Register</button>
-                                           
+                                               <button type="button" id="registerBtn" class="btn btn-primary">Register</button>
                                         </form>
+                                         
+                                              <button class="show-example-btn" aria-label="Show SweetAlert2 success message" onclick="success()">
+      Show success message
+    </button>
+<button class="show-example-btn" aria-label="Show SweetAlert2 success message" onclick="error()">
+      Show error message
+    </button>
                                         <%--<a href="#" class="forgot-pass">Forgot Password?</a>--%>
                                     </div>
                                 </div>
@@ -308,23 +318,30 @@
         </div>
     </div>
     <!-- JavaScript files-->
-    <script src="../Assets/Js/jquery.min.js"></script>
-    <script src="Assets/Js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <%--<script src="../Assets/Js/jquery.min.js"></script>--%>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+     <script>
+        
+        
+     </script>
+    <script src="../Assets/Js/bootstrap.min.js"></script>
     
     <script src="../Assets/Js/popper.min.js"> </script>
     <script src="../Assets/Js/jquery.cookie.js"> </script>
 
-    <script src="../Assets/Js/jquery.validate.min.js"></script>
-    <script src="../Assets/Js/charts-home.js"></script>
-    <script src="../Assets/Js/charts-custom.js"></script>
+    <%--<script src="../Assets/Js/jquery.validate.min.js"></script>--%>
+    <%--<script src="../Assets/Js/charts-home.js"></script>--%>
+    <%--<script src="../Assets/Js/charts-custom.js"></script>--%>
     <!-- Main File-->
-    <script src="../Assets/Js/front.js"></script>
-    <script src="Assets/Js/Custom.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+   
+   <script src="../Assets/Js/Custom.js"></script>
+  
+     <script src="../Assets/Js/front.js"></script>
     <!-- Main File-->
     
   <script src="intl-tel-input-master/build/js/intlTelInput.min.js"></script>
+   
     <script>
         var input = document.querySelector("#Mobile");
         window.intlTelInput(input, {
@@ -410,12 +427,30 @@
                     }),
                     success: function (data) {
                         if (data.d == "Successful") {
-                            //swal("Here's a message!");
-                            alert("Your Registration is Completed Successfully "+"\r\n"+"Check Your details on Reg Email");
-                            window.location.href = window.location.href;
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Successful',
+                                title: 'You Have Registrated Successfully',
+                                /* footer: 'success'*/
+                            }).then((result) => {
+                                /* Read more about isConfirmed, isDenied below */
+                                if (result.isConfirmed) {
+                                    window.location.href = '/Index';
+                                }
+                            })
                         }
                         else {
-                            alert("User Details are already Exists!!!" + "\r\n" + "Give New EmailID and Mobile Number");
+                            Swal.fire({
+                                icon: 'failure',
+                                title: 'Fail',
+                                title: 'EmailID already exists',
+                                /* footer: 'success'*/
+                            }).then((result) => {
+                                /* Read more about isConfirmed, isDenied below */
+                                if (result.isConfirmed) {
+
+                                }
+                            })
                         }
                     }
                 });

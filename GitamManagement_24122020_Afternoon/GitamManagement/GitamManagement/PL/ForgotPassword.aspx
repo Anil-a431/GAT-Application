@@ -153,11 +153,11 @@
                         <div class="info d-flex">
                             <div class="content">
 
-                                <h2 style="font-size:30px;">GAT Online Application 2021</h2>
-                                <h4 class="mb-4">Application for admission to  UG & PG Programs of Architecture, Basic Sciences, Engineering, Humanities, Law, Management, Nursing, Paramedical and Pharmacy offered at GITAM Campuses</h4>
+                                <h2 style="font-size:30px;" class="text-center">GAT Online Application 2021</h2>
+                                <h4 style="line-height:1.4">Application for admission to  UG & PG Programs of Architecture, Basic Sciences, Engineering, Humanities, Law, Management, Nursing, Paramedical and Pharmacy offered at GITAM Campuses</h4>
                                 <h4 >Fee:</h4>
                                 <ul>
-                                    <li>Application fee: Rs. 800 (for all courses)</li>
+                                    <li>Application fee: <b>Rs. 800</b> (for all courses)</li>
 
                                    
                                 </ul>
@@ -166,7 +166,7 @@
                                     <ul>
                                         <li>Carefully read GAT-2021 information, before proceeding to apply online.  Click here.</li>
                                         <li><a href="https://gat.gitam.edu/" class="text-white" target="_blank">Click here</a> to read all the instructions and eligibility criteria for admission test before proceeding to fill the online application form</li>
-                                        <li>For queries call us at 8880884000 or drop a mail at <a class="text-white" href="mailto: gat@gitam.edu">gat@gitam.edu</a> </li>
+                                        <li>For queries call us at <b>8880884000</b> or drop a mail at <a class="text-white" href="mailto: gat@gitam.edu"><b>gat@gitam.edu</b></a> </li>
                                     </ul>
 
                                 </p>
@@ -244,12 +244,12 @@
                     }),
                     success: function (data) {
                         if (data.d == "Successful") {
-                            setTimeout(function () { alert('Your Password has been sent to your Registered EmailID'); }, 2000);
+                            setTimeout(function () { alert('Your Password has been sent to your Registered EmailID'); }, 5000);
                             window.location.href = "/Index";
                             return;
                         }   
                         else {
-                            alert('Your EmailID is not registered with GITAM');
+                            setTimeout(function () { alert('Your EmailID is not registered with GITAM'); }, 2000);
                             window.location.href = '/Index';
                             return;
                         }

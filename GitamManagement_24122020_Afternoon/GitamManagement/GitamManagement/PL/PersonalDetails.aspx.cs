@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Threading;
 
 namespace GitamManagement.PL
 {
@@ -159,48 +160,27 @@ namespace GitamManagement.PL
                 }
                 string fileName = Path.GetFileNameWithoutExtension(fileUploadInput.PostedFile.FileName);
                 string filextension = Path.GetExtension(fileUploadInput.PostedFile.FileName);
-                string[] stringArray = new string[3] { ".jpg", ".png", ".jpeg" };
-                
                 DataTable dt = new DataTable();
                 dt = objService.getImagePath(Session["UserId"].ToString());
                 string databaseimgPath = dt.Rows[0]["UserPhoto"].ToString();
-                //string databasefilePath = databaseimgPath.Replace("/Images/","");
-                
                 databaseimgPath = databaseimgPath.Replace("/Images/", "");
-
-                if (databaseimgPath == destinationPath+""+ fileName)
+                string ext = databaseimgPath.Replace("/Images/","").Replace(Session["UserId"].ToString(), "").Replace(".","");
+                int pos = databaseimgPath.IndexOf(".");
+                if (pos >= 0)
                 {
-                    System.IO.File.Delete(Server.MapPath("~/Images/"+databaseimgPath));
+                    databaseimgPath = databaseimgPath.Remove(pos);
                 }
-
-                //string[] stringArray = new string[3] { ".jpg", ".png", ".jpeg" };
-                //var nameWithoutExtension = Path.GetFileNameWithoutExtension(fileName);
-                //var i = 1;
-                //while (File.Exists(destinationPath + fileName))
-                //{
-                //    fileName = nameWithoutExtension.Trim() + " (" + i + ")" + filextension;
-                //    i++;
-                //}
-                string newextension=string.Empty;
-                //foreach (string x in stringArray)
-                //{
-                //    if (stringArray.Contains(destinationPath.))
-                //    {
-                //        newextension = filextension;
-                //    }
-                //}
-                //if (File.Exists(Server.MapPath("~/Images/" + Session["UserId"] + filextension))
-                //{
-                //    File.Replace(Server.MapPath("~/Images/" + Session["UserId"] + filextension), 
-                //        Server.MapPath("~/Images/" + fileName + filextension),
-                //        Server.MapPath("~/Images/" + fileName + ".bak"));
-                //}
-
+                if (Session["UserId"].ToString()  == databaseimgPath)
+                {
+                    System.IO.File.Delete(Server.MapPath("~/Images/"+Session["UserId"]+"."+ext));
+                }
                 fileUploadInput.SaveAs(Server.MapPath("~/Images/" + Session["UserId"] + filextension));
                 string status = objInsert.InsertUserPersonalDetails(gender1, dateofbirth, Adnumber, cat, nat, perAdd, "/Images/" + Session["UserId"] + filextension, aboutGitam,FirstName, LastName,1);
                 if (status == "Successful")
                 {
+                    Thread.Sleep(2000);
                     ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Details are Updated')", true);
+                    Thread.Sleep(2000);
                     Response.Redirect("/ContactDetails");
                 }
                 else

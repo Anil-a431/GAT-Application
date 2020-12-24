@@ -66,6 +66,21 @@ namespace GitamManagement
         }
 
         [System.Web.Services.WebMethod(EnableSession = true)]
+        public List<DistNames> getDistNames(string stateID)
+        {
+            List<DistNames> objDNames = new GitDAl().getDistNames(Convert.ToInt32(stateID.ToString()));
+            return objDNames;
+
+        }
+        [System.Web.Services.WebMethod(EnableSession = true)]
+        public List<CityDetailsDistID> getCityDetailsByDist(string distID)
+        {
+            List<CityDetailsDistID> objCityNames = new GitDAl().getCityDetailsByDist(Convert.ToInt32(distID.ToString()));
+            return objCityNames;
+        }
+
+
+        [System.Web.Services.WebMethod(EnableSession = true)]
         public DataSet getUserDataReporting(int UserId)
         {
             DataSet ds = new GitDAl().getUserDataReporting(UserId);
@@ -92,6 +107,13 @@ namespace GitamManagement
         {
             DataSet dt = new GitDAl().GetUserCourses(Convert.ToInt32(UserId),Convert.ToInt32(PaymentStatus));
             return dt;
+        }
+
+        [System.Web.Services.WebMethod(EnableSession = true)]
+        public PrevEduDetails getPrevDetails()
+        {
+            PrevEduDetails prvdetails = new GitDAl().getPrevDetails(Session["UserId"].ToString());
+            return prvdetails;
         }
 
         [System.Web.Services.WebMethod(EnableSession = true)]
@@ -328,14 +350,16 @@ namespace GitamManagement
         }
 
         [System.Web.Services.WebMethod(EnableSession = true)]
-        public string InsertUserCourseSelection(string institue, string study,string yop,string university)
+        public string InsertUserCourseSelection(string institue, string study,string yop,string university,
+            string StateID,string DistID,string CityID,int update=0)
         {
 
             Common objemail = new Common();
             EmailModel objemailModel = new EmailModel();
             string emailStatus = string.Empty;
             string userId = Session["UserId"].ToString();
-            DataTable dt = new GitDAl().InsertUserCourseSelection(userId, institue, study, yop, university);
+            DataTable dt = new GitDAl().InsertUserCourseSelection(userId, institue, study, yop, university,
+                StateID,DistID,CityID, update);
             if (dt == null)
             {
                 return "Failed";
